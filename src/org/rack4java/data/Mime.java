@@ -11,6 +11,8 @@ import org.rack4java.context.LiteralContext;
  *
  */
 public class Mime {
+	public static final String DEFAULT_MIME_TYPE = "application/octet-stream";
+	
 	@SuppressWarnings("unchecked") public static final Context<String> MIME_TYPES = new FallbackContext<String>(
 		new LiteralContext<String>(
 			".123",        "application/vnd.lotus-1-2-3",
@@ -619,5 +621,5 @@ public class Mime {
 			".zaz",        "application/vnd.zzazz.deck+xml",
 			".zip",        "application/zip",
 			".zmm",        "application/vnd.handheld-entertainment+xml"
-		), new DefaultContext<String>("application/octet-stream"));
+		), new DefaultContext<String>(DEFAULT_MIME_TYPE));
 }
