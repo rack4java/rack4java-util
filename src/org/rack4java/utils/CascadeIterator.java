@@ -8,7 +8,7 @@ public class CascadeIterator<T> implements Iterator<T> {
 	private Iterator<? extends T> current;
 	private int index;
 	
-	public CascadeIterator(Iterable<? extends T>... iterables) {
+	public CascadeIterator(@SuppressWarnings("unchecked") Iterable<? extends T>... iterables) {
 		this.iterables = iterables;
 		this.index = 0;
 		current = null;

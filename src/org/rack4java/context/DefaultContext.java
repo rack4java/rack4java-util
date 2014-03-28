@@ -16,7 +16,7 @@ public class DefaultContext<T> implements Context<T> {
 		this.value = value;
 	}
 
-	@SuppressWarnings("unchecked") @Override public Iterator<Map.Entry<String, Object>> iterator() {
+	@SuppressWarnings("unchecked") @Override public Iterator<Map.Entry<String, T>> iterator() {
 		return EmptyIterator.it;
 	}
 

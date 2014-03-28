@@ -21,8 +21,8 @@ public class FallbackContext<T> implements Context<T> {
 		return null;
 	}
 
-	@Override public Iterator<Map.Entry<String,Object>> iterator() {
-		return new CascadeIterator<Map.Entry<String,Object>>(list);
+	@Override public Iterator<Map.Entry<String,T>> iterator() {
+		return new CascadeIterator<Map.Entry<String,T>>(list);
 	}
 
 	@Override public Context<T> with(String key, Object value) {
